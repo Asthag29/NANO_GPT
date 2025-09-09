@@ -1,3 +1,4 @@
+#training is done on 10 million tokens
 
 import torch
 import torch.nn as nn
@@ -220,3 +221,14 @@ print(decode(model.generate(context_idx , max_new_tokens= 1000)[0].tolist()))
 # Cons:
 # - Less diversity in attention patterns
 # - Fewer parallel computations
+
+
+# we have just implemented the decoder part with feed forward networj we have not implemented the encoder part and cross attention part, trainglular mask to produce output in the autoregressive way makes it a decoder
+# encoder --> tokens are allowed to talk to each other 
+# query are still generated form decoder x , but the keys and values come from conditioning part, we have not implemented because we have no conditiining 
+
+
+# in fine tuning it will just babbels it won;t be useful it will try to just complete texts given previous texts , when you give some question it will probably follow you up with more question (something related to it)
+#fine tuning --> fine tuning is done based on documnet which has question answer like structure
+# reward model --> rank the output then based on performence data , reward model is generated 
+#PPo --> reinforcement learning algorithm
