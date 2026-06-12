@@ -1,0 +1,36 @@
+<svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Decoder-only transformer flow</title>
+  <desc id="desc">A simple diagram showing the components used by this nanoGPT learning project.</desc>
+  <rect width="900" height="360" fill="#f8fafc"/>
+  <text x="450" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#0f172a">Decoder-only Transformer</text>
+  <g font-family="Arial, sans-serif" font-size="15" fill="#0f172a">
+    <rect x="40" y="120" width="130" height="72" rx="12" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="105" y="150" text-anchor="middle" font-weight="700">Input Tokens</text>
+    <text x="105" y="174" text-anchor="middle">characters</text>
+    <rect x="215" y="120" width="150" height="72" rx="12" fill="#e0e7ff" stroke="#4f46e5"/>
+    <text x="290" y="150" text-anchor="middle" font-weight="700">Embeddings</text>
+    <text x="290" y="174" text-anchor="middle">token + position</text>
+    <rect x="410" y="86" width="190" height="140" rx="16" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="505" y="120" text-anchor="middle" font-weight="700">Transformer Block</text>
+    <text x="505" y="150" text-anchor="middle">masked self-attention</text>
+    <text x="505" y="178" text-anchor="middle">feed-forward network</text>
+    <text x="505" y="206" text-anchor="middle">layer norm + residuals</text>
+    <rect x="645" y="120" width="130" height="72" rx="12" fill="#fef3c7" stroke="#d97706"/>
+    <text x="710" y="150" text-anchor="middle" font-weight="700">Logits</text>
+    <text x="710" y="174" text-anchor="middle">next token scores</text>
+    <rect x="810" y="120" width="55" height="72" rx="12" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="837" y="150" text-anchor="middle" font-weight="700">Text</text>
+    <text x="837" y="174" text-anchor="middle">out</text>
+  </g>
+  <g stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M170 156 H215"/>
+    <path d="M365 156 H410"/>
+    <path d="M600 156 H645"/>
+    <path d="M775 156 H810"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>
