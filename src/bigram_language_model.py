@@ -1,10 +1,12 @@
 
+from pathlib import Path
+
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
-with open('input.txt', 'r') as f:
-    text = f.read()
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "tiny_shakespeare.txt"
+text = DATA_PATH.read_text(encoding="utf-8")
 
 #hyperparameter
 torch.manual_seed(1337)
