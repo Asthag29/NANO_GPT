@@ -4,8 +4,6 @@ This project was created to understand the working of transformer models and the
 
 ![Decoder-only transformer flow](docs/images/transformer_decoder.svg)
 
-![Masked self-attention](docs/images/masked_attention.svg)
-
 ## Project Layout
 
 - `src/bigram_language_model.py` - bigram baseline with loss evaluation and generation.
